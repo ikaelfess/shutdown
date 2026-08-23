@@ -130,14 +130,10 @@ linters:
       branch-max-lines: 2
 
 formatters:
+  # Only enable listed formatters. gci, goimports, golines, and swaggo stay off.
   enable:
     - gofmt
     - gofumpt
-  disable:
-    - gci        # import grouping/ordering — gofumpt already handles standard grouping
-    - goimports  # import management — redundant with gofumpt
-    - golines    # line wrapping — too opinionated, can break readability
-    - swaggo     # swaggo comment formatting — only for swaggo users
   settings:
     gofumpt:
       extra-rules: true
